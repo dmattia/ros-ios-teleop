@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28450FB43E8A340860FD1188 /* Pods_ros_controller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E750BF10C9CAB27856C1A562 /* Pods_ros_controller.framework */; };
 		F1DC4A261CAF6100006962E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC4A251CAF6100006962E9 /* AppDelegate.swift */; };
 		F1DC4A281CAF6100006962E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC4A271CAF6100006962E9 /* ViewController.swift */; };
 		F1DC4A2B1CAF6100006962E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1DC4A291CAF6100006962E9 /* Main.storyboard */; };
@@ -16,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EAD14FBA4501F03AAB94049 /* Pods-ros-controller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ros-controller.release.xcconfig"; path = "Pods/Target Support Files/Pods-ros-controller/Pods-ros-controller.release.xcconfig"; sourceTree = "<group>"; };
+		622919C5CCC6642C2E01A11C /* Pods-ros-controller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ros-controller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ros-controller/Pods-ros-controller.debug.xcconfig"; sourceTree = "<group>"; };
+		E750BF10C9CAB27856C1A562 /* Pods_ros_controller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ros_controller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F12F5A1D1CAF681400393652 /* ros-controller-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ros-controller-Bridging-Header.h"; sourceTree = "<group>"; };
 		F1DC4A221CAF6100006962E9 /* ros-controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ros-controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DC4A251CAF6100006962E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1DC4A271CAF6100006962E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +36,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28450FB43E8A340860FD1188 /* Pods_ros_controller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52E1D58B73C0582F532B1AD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				622919C5CCC6642C2E01A11C /* Pods-ros-controller.debug.xcconfig */,
+				1EAD14FBA4501F03AAB94049 /* Pods-ros-controller.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2841DFF41C04548DAB68D4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E750BF10C9CAB27856C1A562 /* Pods_ros_controller.framework */,
+				F12F5A1D1CAF681400393652 /* ros-controller-Bridging-Header.h */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F1DC4A191CAF6100006962E9 = {
 			isa = PBXGroup;
 			children = (
 				F1DC4A241CAF6100006962E9 /* ros-controller */,
 				F1DC4A231CAF6100006962E9 /* Products */,
+				52E1D58B73C0582F532B1AD2 /* Pods */,
+				D2841DFF41C04548DAB68D4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1DC4A371CAF6100006962E9 /* Build configuration list for PBXNativeTarget "ros-controller" */;
 			buildPhases = (
+				ABF4281C5A5A2BB79142192C /* Check Pods Manifest.lock */,
 				F1DC4A1E1CAF6100006962E9 /* Sources */,
 				F1DC4A1F1CAF6100006962E9 /* Frameworks */,
 				F1DC4A201CAF6100006962E9 /* Resources */,
+				299C049AA1D778BE85CEA2C1 /* Embed Pods Frameworks */,
+				CA541B11200CCAF25E80BC2D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,6 +128,7 @@
 				TargetAttributes = {
 					F1DC4A211CAF6100006962E9 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = TC2DGK638A;
 					};
 				};
 			};
@@ -132,6 +162,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		299C049AA1D778BE85CEA2C1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ros-controller/Pods-ros-controller-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABF4281C5A5A2BB79142192C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA541B11200CCAF25E80BC2D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ros-controller/Pods-ros-controller-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1DC4A1E1CAF6100006962E9 /* Sources */ = {
@@ -251,23 +329,33 @@
 		};
 		F1DC4A381CAF6100006962E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622919C5CCC6642C2E01A11C /* Pods-ros-controller.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ros-controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.David-mattia.ros-controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		F1DC4A391CAF6100006962E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EAD14FBA4501F03AAB94049 /* Pods-ros-controller.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ros-controller/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.David-mattia.ros-controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -290,6 +378,7 @@
 				F1DC4A391CAF6100006962E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
